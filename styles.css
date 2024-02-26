@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+*::selection {
+    background: rgba(84, 84, 84, 0.5);
+}
+
+body {
+    font-family: 'Abel', 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: white;
+    background: #2e3237;
+}
+
+.section {
+    position: relative;
+    display: block;
+    width: 800px;
+
+    margin: 40px auto;
+
+    background: #1d1d1d;
+}
+
+.s_container {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-bottom: dashed 1px rgb(96, 96, 96);
+}
+
+details[open] summary .s_triangle {
+    animation: change_color_to_orange 1s forwards;
+}
+
+@keyframes change_color_to_orange {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+        color: orange;
+    }
+}
+
+.s_container summary {
+    list-style: none;
+    list-style-type: none;
+    list-style: none outside none;
+    outline: none;
+}
+
+.s_container summary:focus {
+    outline: none;
+}
+
+.s_container summary::-webkit-details-marker {
+    display: none;
+}
+
+.s_container:hover {
+    background: #2b2b2b;
+    cursor: pointer;
+}
+
+.s_triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.s_summary {
+    display: flex;
+    justify-content: space-between;
+    text-wrap: nowrap;
+}
+
+.s_left_col,
+.s_right_col {
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.s_left_col {
+    text-align: left;
+}
+
+.s_right_col {
+    text-align: right;
+}
+
+.s_content {
+    padding: 0.5rem 3rem;
+}
